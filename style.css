@@ -1,0 +1,157 @@
+:root {
+    --clr-neonrock: rgb(255, 94, 20);
+    --clr-neonpaper: rgb(20, 255, 235);
+    --clr-neonscissor: rgb(20, 114, 255);
+    --clr-hdft: rgba(14, 14, 14, 0.775);
+    --clr-bg: rgb(33, 25, 25);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--clr-bg);
+    color: white;
+    text-align: center;
+}
+
+.header {
+    height: 60px;
+    background: var(--clr-hdft);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: bolder;
+    font-size: 26px;
+    border-bottom: 1px solid #302f2f0c;
+    flex-shrink: 0.2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    gap: 50px;
+}
+
+.footer {
+    height: 60px;
+    background: var(--clr-hdft);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #302f2f0c;
+    font-size: 16px;
+    gap: 15px;
+}
+
+.fa-github {
+    color: #ddd;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+.grid {
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    display: grid;
+    box-shadow: rgba(255, 255, 255, 0.23) 0px 3px 8px;
+}
+
+.gridAlter {
+    background-color: black;
+}
+
+.gridBorder {
+    border: 1px dotted black;
+    animation: fadeIn ease 4s;
+}
+
+.gridBorderAlt {
+    border: 1px dotted black;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.slider {
+    -webkit-appearance: none;  
+    appearance: none;
+    height: 25px; 
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1; 
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 25px;
+    height: 25px; 
+    background: #606161; 
+    cursor: pointer; 
+  }
+
+button {
+    font-size: 1.5rem;
+    font-family: inherit;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.3em 1em;
+    border-radius: 0.25em;
+    position: relative;
+    background-color: inherit;
+    color: var(--clr-neonreplay);
+    border: var(--clr-neonreplay) 0.125em solid;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neonreplay), 0 0 0.5em 0 var(--clr-neonreplay);
+}
+
+button:hover {
+    transform: scale(1.15);
+}
+
+button:active {
+    transform: translateY(4px);
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }

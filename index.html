@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous">
+    </script>
+    <link href="images/favicon.png" rel="shortcut icon">
+</head>
+
+<body>
+    <header class="header">Etch-a-Sketch</header>
+    <div class="main">
+        <div class="grid">
+        </div>
+
+        <div class="settings">
+            <div class="slidercontainer">
+                <div class="sliderdisplay"></div>
+                <input type="range" min="1" max="32" value="16" class="slider" id="myRange">
+              </div>
+            <div class="buttonsettings">
+                <button class=gridbtn onclick="removeAddBorder();"> GRID
+                </button>
+                <button class=draw onclick="drawMode();"> DRAW
+                </button>
+                <button class=erase onclick="eraseMode();"> ERASE
+                </button>
+                <button class=clear onclick="clearGrid();"> CLEAR
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright © 2022 jasontduong</p>
+        <a href="https://github.com/jasontduong" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </footer>
+    <script src="sketch.js"></script>
+</body>
+
+</html>
